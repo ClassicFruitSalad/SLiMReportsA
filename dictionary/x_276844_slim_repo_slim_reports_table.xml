@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="update_synch=true" extends="sys_metadata" label="SLiM Compliance Data" max_length="40" name="x_276844_slim_repo_slim_reports_table" type="collection">
+        <element label="Application" max_length="250" name="application" type="string"/>
+        <element label="Application ID" max_length="40" name="application_id" type="integer"/>
+        <element label="Balance" max_length="40" name="balance" type="integer"/>
+        <element label="Business Unit" max_length="100" name="business_unit" type="string"/>
+        <element label="Business Unit ID" max_length="40" name="business_unit_id" type="integer"/>
+        <element label="CALType ID" max_length="40" name="caltype_id" type="integer"/>
+        <element label="Comment" max_length="100" name="comment" type="string"/>
+        <element label="Entitlement" max_length="40" name="entitlement" type="integer"/>
+        <element label="Publisher" max_length="255" name="publisher" type="string"/>
+        <element label="Requirement" max_length="40" name="requirement" type="integer"/>
+        <element label="Status" max_length="100" name="status" type="string"/>
+        <element label="Units" max_length="100" name="units" type="string"/>
+        <element label="Version" max_length="100" name="version" type="string"/>
+    </element>
+</database>

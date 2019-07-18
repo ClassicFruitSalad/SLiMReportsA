@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysauto_report">
+    <sysauto_report action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <address_list>antons@bcsltd.com</address_list>
+        <condition/>
+        <conditional>false</conditional>
+        <group_list/>
+        <include_detail>false</include_detail>
+        <include_with/>
+        <name>Scheduled execution of Software Licensing &amp; Compliance</name>
+        <omit_if_no_records>false</omit_if_no_records>
+        <output_type>PDF-landscape</output_type>
+        <page_height_in_pixels>612</page_height_in_pixels>
+        <page_size>Letter</page_size>
+        <page_width_in_pixels>792</page_width_in_pixels>
+        <report display_value="Software Licensing &amp; Compliance">b3685323db42330016488632399619a9</report>
+        <report_body><![CDATA[<p>Hi</p>
+<p>Please find attached this months compliance chart.</p>
+<p>Thanks</p>
+<p>SLiM</p>]]></report_body>
+        <report_title>Compliance Chart</report_title>
+        <run_as display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</run_as>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek>1</run_dayofweek>
+        <run_period/>
+        <run_start>2019-06-21 13:37:32</run_start>
+        <run_time>1970-01-01 20:00:00</run_time>
+        <run_type>daily</run_type>
+        <sys_class_name>sysauto_report</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-06-21 13:39:23</sys_created_on>
+        <sys_id>d0885363db423300164886323996199a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Scheduled execution of Software Licensing &amp; Compliance</sys_name>
+        <sys_package display_value="SLiM Reports" source="x_276844_slim_repo">f9bc4253db4233001648863239961942</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SLiM Reports">f9bc4253db4233001648863239961942</sys_scope>
+        <sys_update_name>sysauto_report_d0885363db423300164886323996199a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-06-21 13:39:23</sys_updated_on>
+        <upgrade_safe>false</upgrade_safe>
+        <user_list/>
+        <zip>false</zip>
+    </sysauto_report>
+</record_update>

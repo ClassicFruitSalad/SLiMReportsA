@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action">
+    <sys_ui_action action="INSERT_OR_UPDATE">
+        <action_name>sysverb_get_api_report</action_name>
+        <active>true</active>
+        <client>false</client>
+        <client_script_v2><![CDATA[function onClick(g_form) {
+
+}]]></client_script_v2>
+        <comments/>
+        <condition/>
+        <form_action>false</form_action>
+        <form_button>false</form_button>
+        <form_button_v2>false</form_button_v2>
+        <form_context_menu>false</form_context_menu>
+        <form_link>false</form_link>
+        <form_menu_button_v2>false</form_menu_button_v2>
+        <form_style/>
+        <hint/>
+        <isolate_script>false</isolate_script>
+        <list_action>true</list_action>
+        <list_banner_button>true</list_banner_button>
+        <list_button>false</list_button>
+        <list_choice>false</list_choice>
+        <list_context_menu>false</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <name>Get API Report Data</name>
+        <onclick/>
+        <order>100</order>
+        <script><![CDATA[//gs.addInfoMessage(value); - great for debugging
+// field name capitalisation matters !
+
+try {
+    var request = new sn_ws.RESTMessageV2('x_276844_slim_repo.SLiM Reports API', 'GET Report');
+    request.setStringParameterNoEscape('reportid', '22');
+    var response = request.execute();
+    var httpResponseStatus = response.getStatusCode();
+    var httpResponseContentType = response.getHeader('Content-Type');
+    var parsed = {};
+    var httpResponseBody;	
+
+    //  if request is successful then parse the response body
+    if (httpResponseStatus == 200 && httpResponseContentType == 'application/json; charset=utf-8') {
+        
+		httpResponseBody = response.getBody();	
+	
+        // parse response to JSON object   
+        parsed = JSON.parse(httpResponseBody);			
+
+        // delete existing records	
+        var deleterecords = new GlideRecord('x_276844_slim_repo_slim_reports_table');
+        deleterecords.deleteMultiple();      			
+
+        // iterate over reportContent JSON object for each report record
+        for (var i = 0; i < parsed.reportContent.length; i++) {
+            
+			var gr = new GlideRecord('x_276844_slim_repo_slim_reports_table');
+            gr.initialize();        			
+            
+			gr.publisher = parsed.reportContent[i]["Publisher"];
+            gr.application = parsed.reportContent[i]["Application"];
+            gr.version = parsed.reportContent[i]["Version"];			
+			gr.units = parsed.reportContent[i]["Units"];
+			gr.business_unit = parsed.reportContent[i]["BusinessUnit"];
+			gr.entitlement = parseInt(parsed.reportContent[i]["Entitlement"]);
+			gr.requirement = parseInt(parsed.reportContent[i]["Requirement"]);
+			gr.balance = parseInt(parsed.reportContent[i]["Balance"]);
+			gr.business_unit_id = parseInt(parsed.reportContent[i]["BusinessUnitID"]);
+			gr.comment = parsed.reportContent[i]["Comment"];
+			gr.caltype_id = parseInt(parsed.reportContent[i]["CALTypeID"]);			
+            gr.application_id = parseInt(parsed.reportContent[i]["ApplicationID"]);
+			gr.status = parsed.reportContent[i]["Status"];
+			
+            gr.insert();
+        }
+    }
+}
+catch (ex) {
+    var message = ex.message;
+    gs.addErrorMessage('Something went wrong :' + '  ' + message);
+}
+
+]]></script>
+        <show_insert>true</show_insert>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-06-20 13:52:29</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>4b02da57db4233001648863239961910</sys_id>
+        <sys_mod_count>35</sys_mod_count>
+        <sys_name>Get API Report Data</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="SLiM Reports" source="x_276844_slim_repo">f9bc4253db4233001648863239961942</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SLiM Reports">f9bc4253db4233001648863239961942</sys_scope>
+        <sys_update_name>sys_ui_action_4b02da57db4233001648863239961910</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-06-21 15:45:54</sys_updated_on>
+        <table>x_276844_slim_repo_slim_reports_table</table>
+        <ui11_compatible>true</ui11_compatible>
+        <ui16_compatible>false</ui16_compatible>
+    </sys_ui_action>
+</record_update>

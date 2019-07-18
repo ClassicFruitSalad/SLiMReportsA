@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_module">
+    <sys_ui_module action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <application display_value="SLiM Reports">96bc8a53db4233001648863239961906</application>
+        <filter/>
+        <name>SLiM Reports Table</name>
+        <order/>
+        <path/>
+        <path_relative_to_root>false</path_relative_to_root>
+        <roles>x_276844_slim_repo.user</roles>
+        <sys_class_name>sys_ui_module</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-06-20 13:27:57</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>debc8a53db4233001648863239961914</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>SLiM Reports Table</sys_name>
+        <sys_package display_value="SLiM Reports" source="x_276844_slim_repo">f9bc4253db4233001648863239961942</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SLiM Reports">f9bc4253db4233001648863239961942</sys_scope>
+        <sys_update_name>sys_ui_module_debc8a53db4233001648863239961914</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-06-20 13:27:57</sys_updated_on>
+        <table>x_276844_slim_repo_slim_reports_table</table>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+    </sys_ui_module>
+</record_update>
