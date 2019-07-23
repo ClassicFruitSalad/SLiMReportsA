@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="x_276844_slim_repo_slim_reports_table">
+    <x_276844_slim_repo_slim_reports_table action="INSERT_OR_UPDATE">
+        <application>7-Zip</application>
+        <application_id>1225</application_id>
+        <balance>64</balance>
+        <business_unit>Metered Anton</business_unit>
+        <business_unit_id>65</business_unit_id>
+        <caltype_id>0</caltype_id>
+        <comment/>
+        <entitlement>71</entitlement>
+        <publisher>7 Zip</publisher>
+        <requirement>7</requirement>
+        <status>Compliant</status>
+        <sys_class_name>x_276844_slim_repo_slim_reports_table</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-07-23 13:56:40</sys_created_on>
+        <sys_id>38cf844edb3233000bb42737489619cd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="SLiM Reports" source="x_276844_slim_repo">f9bc4253db4233001648863239961942</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SLiM Reports">f9bc4253db4233001648863239961942</sys_scope>
+        <sys_update_name>x_276844_slim_repo_slim_reports_table_38cf844edb3233000bb42737489619cd</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-07-23 13:56:40</sys_updated_on>
+        <units/>
+        <version>7</version>
+    </x_276844_slim_repo_slim_reports_table>
+</record_update>
